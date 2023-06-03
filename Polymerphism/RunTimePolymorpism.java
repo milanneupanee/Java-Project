@@ -15,16 +15,8 @@ class  Cat extends Animal{
 }
 public class RunTimePolymorpism {
     public static void main(String[] args) {
-        /*
-         * Using upcasting concept
-         *
-         */
         Animal animal=new Cat();
         animal.makeSound();
-        /*
-        * using down casting concept
-        *
-        * */
         Cat c=(Cat) animal;
         c.canWalk();
     }
