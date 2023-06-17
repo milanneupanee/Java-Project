@@ -1,3 +1,5 @@
+package Simple;
+
 public class firsttry {
    
     public static void main(String[] args){
