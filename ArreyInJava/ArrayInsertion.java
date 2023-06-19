@@ -1,11 +1,8 @@
 package ArreyInJava;
-
 import java.util.Scanner;
-
 class ArraysInput {
     int size1;
     int[] array1;
-
     public void arrayInput() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter size of first array");
@@ -17,7 +14,6 @@ class ArraysInput {
         }
         //sc.close();
     }
-
     public void arrayInsertion(){
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter the index where you want to add the element in array");
@@ -42,7 +38,6 @@ class ArraysInput {
         }
     }
 }
-
 public class ArrayInsertion {
     public static void main(String[] args) {
         ArraysInput input = new ArraysInput();
