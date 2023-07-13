@@ -21,7 +21,6 @@ public class InetExample {
             System.out.println("Host Address:"+lia.getHostAddress());
         }
         catch (Exception e){
-            //noinspection ThrowablePrintedToSystemOut
             System.out.println(e);
         }
     }
