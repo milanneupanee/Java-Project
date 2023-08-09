@@ -26,6 +26,16 @@ class ArrayInput {
 
     void arrayCompare() {
         /*
+         * This block of code print the common array element of both array.
+         * */
+        for (int i = 0; i < size1; i++) {
+            for (int j = 0; j < size2; j++) {
+                if (array1[i] == array2[j]) {
+                    System.out.println(array1[i]);
+                }
+            }
+        }
+        /*
         * This block of code print the unique array element 1st array.
         * */
         for (int i = 0; i < size1; i++) {
@@ -38,10 +48,6 @@ class ArrayInput {
                 }
             }
             if (!foundInArray2) {
-                System.out.println(array1[i]);
-            }
-            /*It will print the common elements*/
-            if (foundInArray2) {
                 System.out.println(array1[i]);
             }
 
@@ -61,16 +67,7 @@ class ArrayInput {
                 System.out.println(array2[i]);
             }
         }
-        /*
-        * This block of code print the common array element of both array.
-        * */
-//        for (int i = 0; i < size1; i++) {
-//            for (int j = 0; j < size2; j++) {
-//                if (array1[i] == array2[j]) {
-//                    System.out.println(array1[i]);
-//                }
-//            }
-//        }
+
     }
 }
 

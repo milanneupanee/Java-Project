@@ -12,6 +12,7 @@ public class ConnectionExample {
             System.out.println("Success");
             String query="Create database if not exists new_database";
             Statement stm = con.createStatement();
+            System.out.println("Created");
             stm.executeUpdate(query);
             String s="Use  new_database;";
             stm.executeUpdate(s);

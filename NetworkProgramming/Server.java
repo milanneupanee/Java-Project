@@ -14,7 +14,7 @@ public class Server {
             System.out.println("Server running at:"+port);
             Socket s=ss.accept();
             DataInputStream dis=new DataInputStream(s.getInputStream());
-            String str=(String)dis.readUTF();
+            String str=dis.readUTF();
             System.out.println("Message"+str);
             ss.close();
         }
