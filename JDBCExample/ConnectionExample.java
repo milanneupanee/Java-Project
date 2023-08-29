@@ -1,9 +1,12 @@
 package JDBCExample;
+import javax.swing.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
 
+
 public class ConnectionExample {
+     LoginPage lp;
     ConnectionExample(){
         try{
 
@@ -20,6 +23,7 @@ public class ConnectionExample {
             stm.executeUpdate(t_query);
             stm.addBatch("insert into table1 values(1,'Milan');");
             stm.executeBatch();
+            JOptionPane.showMessageDialog(lp,"Login Successful");
         }
         catch (Exception e){
             System.out.println(e);

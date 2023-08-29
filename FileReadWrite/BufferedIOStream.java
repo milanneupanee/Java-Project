@@ -1,5 +1,6 @@
 package FileReadWrite;
 import java.io.*;
+import java.nio.file.FileVisitResult;
 
 public class BufferedIOStream {
     public static void main(String[] args) {
@@ -16,13 +17,13 @@ public class BufferedIOStream {
             System.out.println(e.getMessage());
         }
         try{
-            FileInputStream fin=new FileInputStream("./input.txt");
-            BufferedInputStream bin=new BufferedInputStream(fin);
+            FileReader fin=new FileReader("./input.txt");
+            BufferedReader bin=new BufferedReader(fin);
             /*
             * Initially it allocate the size of 2^13=8192 byte=8kb byte of memory as a buffer memory.
             * It can be increase or decrease as a user choice.
             * */
-            System.out.println(bin.available());
+            //System.out.println(bin.available());
             /*
             * read() will read in ascii value. So we need to change it into char.
             * */
@@ -31,9 +32,11 @@ public class BufferedIOStream {
             /*
             * Creating the loop to print all the character.
             * */
-            int content=18;
-            while(( content =bin.read()) != -1){
-                System.out.print((char)content);
+            String content;
+            while(( content =bin.readLine()) != null){
+               String[] abc= content.split(",");
+
+                System.out.println((abc[0]));
             }
             /*
             * Here it will miss the first two char. As it is already printed in line 29 and 30.
